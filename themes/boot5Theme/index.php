@@ -61,8 +61,8 @@ get_header(); ?>
 								<?php
 
 									the_posts_pagination( array(
-										'prev_text' 			=> '<i class="las la-angle-left"></i>',
-										'next_text' 			=> '<i class="las la-angle-right"></i>',
+										'prev_text' 			=> '<i class="fa-solid fa-angle-left"></i>',
+										'next_text' 			=> '<i class="fa-solid fa-angle-right"></i>',
 										'aria_label'			=>  single_post_title('', false),
 										'screen_reader_text'	=>  single_post_title('', false) . ' navigation'
 									) );

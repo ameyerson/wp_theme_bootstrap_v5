@@ -12874,16 +12874,10 @@ main.global .gform_wrapper.gravity-theme .gform_footer {
 
 main.global .breadcrumb-wrapper {
   padding-top: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   position: relative;
   font-size: 12px;
-  /* @include media-breakpoint-up(lg)*/
   /* @include media-breakpoint-down(sm)*/
-}
-@media (min-width: 1178px) {
-  main.global .breadcrumb-wrapper {
-    margin-bottom: 5.5rem;
-  }
 }
 main.global .breadcrumb-wrapper ol {
   margin: 0;
@@ -13101,16 +13095,6 @@ strong.search-excerpt {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.875rem;
-}
-
-.search-form .search-results-label {
-  display: block;
-  /* @include media-breakpoint-up(md)*/
-}
-@media (min-width: 768px) {
-  .search-form .search-results-label {
-    padding-left: 2rem;
-  }
 }
 
 .print-only {

@@ -16,7 +16,7 @@
 
 	<div id="page" class="site">
 
-		<header id="global-header">
+		<header id="global-header" class="mb-4">
 
 			<div class="navigation-top">
 
@@ -29,4 +29,4 @@
 
 		<div id="content" class="site-content">
 
-			<main class="global">
+			<main class="global clearfix">

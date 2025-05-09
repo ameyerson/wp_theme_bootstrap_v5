@@ -11,7 +11,7 @@ if ( ! function_exists( 'get_theme_breadcrumbs' ) && ! is_admin() ) {
 		$args = wp_parse_args( $args, array(
 				'breadcrumb_class'	=> 'breadcrumb',
 				'active_class'		=> 'active',
-				'home_text' 		=> '<i class="fas fa-home"><span class="visually-hidden-focusable">Home</span></i>',
+				'home_text' 		=> '<i class="fa-solid fa-home"><span class="visually-hidden-focusable">Home</span></i>',
 				'category_text' 	=> 'Archives for %s',
 				'tag_text' 			=> 'Posts tagged %s',
 				'author_text' 		=> 'Posted by %s',

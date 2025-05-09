@@ -8,8 +8,8 @@ global $wp_query;
 
 get_header(); ?>
 
-	<?php if (function_exists('usaaef_breadcrumbs')) {
-		usaaef_breadcrumbs(); 
+	<?php if (function_exists('theme_breadcrumbs')) {
+		theme_breadcrumbs(); 
 	} ?>
 
 		<div class="container">

@@ -25,12 +25,12 @@ if ( ! function_exists( 'get_theme_post_navigation' ) && ! is_admin() ) {
 		if ( $previous || $next ) {
 			$navigation = '<nav class="posts-navigation hidden-print"><h2 class="visually-hidden">'. $args['screen_reader_text'] . '</h2><ul class="d-flex flex-row justify-content-between align-items-center w-100 p-0 ' . $args['wrapper_class'] . '" style="list-style: none">';
 			if ($previous) {
-				$navigation .= '<li class="float-start w-50 pe-3 mb-0 d-flex align-items-center"><i class="fas fa-angle-left pe-2"></i>' . $previous . '</li>';
+				$navigation .= '<li class="float-start w-50 pe-3 mb-0 d-flex align-items-center"><i class="fa-solid fa-angle-left pe-2"></i>' . $previous . '</li>';
 			} else {
 				$navigation .= '<li class="float-start w-50 pe-3 mb-0 d-flex align-items-center"></li>';
 			}
 			if ($next) {
-				$navigation .= '<li class="float-end  w-50 ps-3 mb-0 d-flex d-flex align-items-center justify-content-end">' . $next . '<i class="fas fa-angle-right ps-2"></i></li>';
+				$navigation .= '<li class="float-end  w-50 ps-3 mb-0 d-flex d-flex align-items-center justify-content-end">' . $next . '<i class="fa-solid fa-angle-right ps-2"></i></li>';
 			}
 			$navigation .= '</ul></nav>';
 		}

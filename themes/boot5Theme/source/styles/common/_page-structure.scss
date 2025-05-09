@@ -1,0 +1,185 @@
+.screen-reader-text {
+  @include visually-hidden;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    width:100%;
+
+    img {
+        margin-right: 1rem;
+    }
+}
+
+.has-sidebar .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.global {
+    img, figure, video, embed, object {
+        max-width: 100%;
+        height: auto;
+
+        &::only-child {
+            margin-bottom: 0;
+        }
+    }
+
+    audio {
+        width: 100%;
+    }
+    audio:focus,
+    video:focus {
+        outline: thin dotted;
+    }
+}
+
+/*--------------------------------------------------------------
+WordPress Image Alignment Classes
+--------------------------------------------------------------*/
+
+img.alignleft,
+.wp-caption.alignleft {
+
+    display: block;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(sm) {
+
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+
+
+    } /* @include media-breakpoint-up(sm)*/
+}
+
+img.aligncenter,
+.wp-caption.aligncenter {
+
+    display: block;
+    margin-bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include media-breakpoint-up(sm) {
+
+        margin-bottom: 1rem;
+
+
+    } /* @include media-breakpoint-up(sm)*/
+
+}
+img.alignright,
+.wp-caption.alignright {
+
+    display: block;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(sm) {
+
+        float: right;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+
+
+    } /* @include media-breakpoint-up(sm)*/
+}
+
+.wp-caption-text {
+    font-size: .875rem;
+    font-weight: $font-weight-normal;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    border-left: 3px solid $secondary;
+
+
+    @include media-breakpoint-up(xl) {
+    
+        max-width: 80%;
+        
+    } /* @include media-breakpoint-up(xl)*/
+
+}
+
+
+/*--------------------------------------------------------------
+WordPress Galleries
+--------------------------------------------------------------*/
+
+.gallery-item {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin: 0 0 1.5em;
+    padding: 0 1em 0 0;
+    width: 50%;
+}
+
+.gallery-columns-1 .gallery-item {
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-item a,
+.gallery-item a:hover,
+.gallery-item a:focus,
+.widget-area .gallery-item a,
+.widget-area .gallery-item a:hover,
+.widget-area .gallery-item a:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.gallery-item a img {
+    display: block;
+    -webkit-transition: -webkit-filter 0.2s ease-in;
+    transition: -webkit-filter 0.2s ease-in;
+    transition: filter 0.2s ease-in;
+    transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.gallery-item a:hover img,
+.gallery-item a:focus img {
+    -webkit-filter: opacity(60%);
+    filter: opacity(60%);
+}
+
+.gallery-caption {
+    display: block;
+    text-align: left;
+    padding: 0 10px 0 0;
+    margin-bottom: 0;
+}
+
+/* Gallery Columns */
+
+.gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-1 .gallery-item {
+    max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}

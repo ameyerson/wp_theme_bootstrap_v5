@@ -1,0 +1,70 @@
+#global-header {
+	border-bottom: 1px solid $gray-500;
+
+	.navbar {
+		padding: 1rem 0;
+	}
+	.navbar-brand img {
+		width: 216px;
+		height: auto;
+	}
+	@include media-breakpoint-up(lg) {
+		.navbar-brand img {
+			width: 300px;
+		}
+	}
+
+	//TOGGLE BUTTON 
+	#header-toggle {
+		display: block;
+		padding-left: 1.7rem;
+		position: relative;
+
+		&.open {
+			background: $secondary;
+		}
+	}
+
+	.navbar-toggler {
+/*		top: 0;
+		left: 0;
+		position: absolute;*/
+		position: relative;
+		appearance: none;
+		border: none;
+		background: transparent;
+		width: 32px;
+		height: 32px;
+		padding: 0;
+		outline: none;
+		box-shadow: none;
+	}
+
+	.navbar-toggler:before,
+	.navbar-toggler:after,
+	.navbar-toggler div {
+	  background: $body-color;
+	  content: "";
+	  display: block;
+	  height: 4px;
+	  border-radius: 2px;
+	  margin: 6px 0;
+	  transition: 0.5s;
+	  width: 100%;
+	}
+	.navbar-toggler:not(.collapsed):before {
+	  transform: translateY(8px) rotate(135deg);
+	}
+	.navbar-toggler:not(.collapsed):after {
+	  transform: translateY(-12px) rotate(-135deg);
+	}
+	.navbar-toggler:not(.collapsed) div {
+	  transform: scale(0);
+	}
+
+}
+
+#main-nav > .navbar-nav {
+
+}
+

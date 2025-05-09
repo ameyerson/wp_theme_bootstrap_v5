@@ -1,0 +1,52 @@
+.pagination {
+
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.125rem;
+	font-weight: 700;
+
+	@include  fullwidth-section-padding;
+
+	.interior-page-template & {
+	    @include  interior-section-padding;
+	}
+
+	a {
+
+		border-bottom: 2px solid transparent;
+		padding: 0 2px 5px;
+		margin: 0 1rem;
+
+		&:hover {
+			text-decoration: none;
+			border-color: $gold;
+		}
+	}
+	.current {
+		border-bottom: 4px solid $gold;
+		color: $primary;
+		margin: 0 1rem;
+		padding: 0 2px 5px;
+
+	}
+	.dots {
+		border-bottom: 4px solid transparent;
+		color: $primary;
+		padding-bottom: 5px;
+	}
+	.prev, .next {
+		border-bottom: 0;
+		margin: 0;
+	}
+
+}
+
+#tax-pager,
+#tax-pages {
+	border-top: 2px solid $gray-1;
+}
+
+#tax-pages {
+	font-size: 0.875rem;
+}

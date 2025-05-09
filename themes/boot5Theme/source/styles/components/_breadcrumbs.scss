@@ -1,0 +1,47 @@
+main.global .breadcrumb-wrapper {
+	padding-top: 1rem;
+	margin-bottom: 2.5rem;
+	position: relative;
+	font-size: 12px;
+
+	@include media-breakpoint-up(lg) {
+
+		margin-bottom: 5.5rem;
+		
+	} /* @include media-breakpoint-up(lg)*/
+
+	ol {
+		margin: 0;
+		align-items: center;
+
+		li.breadcrumb-item:last-child {
+
+		}
+
+		i {
+			font-size: 1.2rem;
+		}
+	}
+	.breadcrumb-item.active {
+		color: $gray-900;
+	}
+	.breadcrumb-item + .breadcrumb-item::before {
+	    float: left;
+	    padding-right: 0.5rem;
+	    color: inherit;
+	    font-family: 'Font Awesome 6 Free';
+	    font-weight: 900;
+	    content: '\f105';
+	}
+
+	@include media-breakpoint-down(md) {
+	
+		.breadcrumb-item.active {
+			display: none;
+		}
+		.breadcrumb-item:nth-child(2).active {
+			display: list-item;
+		}
+		
+	} /* @include media-breakpoint-down(sm)*/
+}

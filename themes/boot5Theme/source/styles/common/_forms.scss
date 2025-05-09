@@ -1,0 +1,225 @@
+form.floating-label-form {
+	
+
+	label {
+		display: block;
+	}																							
+
+	.floating-label-wrapper {
+		border-radius: 8px;
+	}
+
+	input.floating-label-input {
+
+		border-radius: 8px;
+		border: 0;
+		padding: 1.125rem 2rem;
+		width: 100%;
+		color: $body-color;
+		font-size: .875rem;
+		transition: background-color 0.15s ease;
+
+		&:hover,
+		&:focus-within {
+		  background-color: $gray-100;
+		}
+
+		&::placeholder {
+		  color: rgba(0, 0, 0, 0);
+		}
+
+	}
+	label.floating-label {
+		display: block;
+		position: relative;
+		max-height: 0;
+		pointer-events: none;
+
+
+		&:before {
+		  color: $body-color;
+		  font-size: .875rem;
+		  content: attr(data-content);
+		  display: inline-block;
+		  // filter: blur(0);
+		  backface-visibility: hidden;
+		  transform-origin: left top;
+		  transition: transform 0.2s ease;
+		  left: 2rem;
+		  position: relative;
+		}
+	}
+	input.floating-label-input:placeholder-shown + label.floating-label::before {
+	  transform: translate3d(0, -2.5rem, 0) scale3d(1, 1, 1);
+	}
+
+	label.floating-label::before,
+	input.floating-label-input:focus + label.floating-label::before {
+	  transform: translate3d(0, -3.5rem, 0) scale3d(0.8, 0.8, 1);
+	}
+
+	input.floating-label-input:focus + label.floating-label::before {
+	  color: $secondary;
+	}
+
+}
+
+main.global form,
+.modal-content form,
+main.global .gform_wrapper.gravity-theme {
+
+	textarea, 
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"] {
+		width: 100%;
+		border: 1px solid $gray-200;
+		border-radius: 4px;
+		background: $gray-100;
+		color: $gray-900;
+		padding: .75rem 1.25rem;
+		font-size: 1rem;
+		line-height: 1.2;
+		-webkit-appearance: none;
+		margin-bottom: 1rem;
+
+		&[aria-invalid=true] {
+			border-color: $red;
+		}
+	}
+
+	label,
+	.gfield_label {
+		font-weight: 700;
+		color: $primary;
+		font-size: 1.125rem;
+		margin-bottom: .5rem;
+		display: block;
+
+		.gfield_required_text {
+			font-style: italic;
+			font-weight: $font-weight-normal;
+		}
+	}
+
+	input[type="checkbox"] + label {
+		display: inline-block;
+		margin-left: 0.5rem;
+	}
+
+	input[type="submit"],
+	button[type="submit"] {
+
+		appearance: none;
+		border: 0;
+		padding: .875rem 1.60rem;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+
+		color: #fff;
+		transition:   	color 0.15s ease-in-out, 
+		        		background-color 0.15s ease, 
+		        		border-color 0.15s ease;
+
+		background-color: $secondary;
+
+		&:hover {
+			color: #fff;
+			background-color: shade-color($secondary,20);
+		}
+
+		&:disabled,
+		&[disabled] {
+			background: $gray-100;
+		}
+
+	}
+
+	select {
+		width: 100%;
+		border: 1px solid $gray-200;
+		border-radius: 4px;
+		background: $gray-100;
+		color: $gray-900;
+		padding: .75rem 1.25rem;
+		font-size: 1rem;
+		line-height: 1.2;
+		-webkit-appearance: none;
+	}
+
+	input[type="checkbox"] {
+
+	  appearance: none;
+	  background-color: $gray-100;
+	  margin: 0;
+	  margin-right: .75rem;
+	  font: inherit;
+	  color: currentColor;
+	  width: 1.15em;
+	  height: 1.15em;
+	  border: 1px solid $gray-200;
+	  border-radius: 0;
+	  position: relative;
+
+	  &::before {
+		  content: "";
+		  width: 7px;
+		  height: 14px;
+		  transform: scale(0) rotate(45deg);
+		  transition: 0.15s transform ease;
+		  border-bottom: 2px solid $secondary;
+		  border-right: 2px solid $secondary;
+		  position: absolute;
+		  top: 1px;
+		  left: 7px;
+		}
+	}
+	input[type="checkbox"]:checked::before {
+	  	transform: scale(1) rotate(45deg);
+	}
+
+	.form-control {
+		display: flex;
+		align-items: center;
+		border: 0;
+		background: transparent;
+
+		i {
+			margin-right: 0.75rem;
+		}
+	}
+
+	.gform_heading {
+		padding-bottom: 1rem;
+		font-size: 1.25rem;
+		font-weight: $font-weight-normal;
+
+	}
+
+	.gfield_validation_message {
+		background: transparent;
+	    border: none;
+	    font-size: .875rem;
+	    margin-top: 0;
+	    padding: 0;
+	    position:relative;
+	    top: -.5rem;
+	}
+	.gform_footer {
+
+		@include media-breakpoint-up(md) {
+		
+			justify-content:end;
+			
+		} /* @include media-breakpoint-up(md)*/
+	}
+
+}
+.gform_confirmation_message {
+
+	margin-bottom: 1rem;
+
+}

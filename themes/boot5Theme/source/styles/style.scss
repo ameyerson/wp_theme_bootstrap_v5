@@ -1,0 +1,35 @@
+/*!
+Theme Name: boot5Theme
+Theme URI: 
+Author: 
+Description: 
+*/
+
+@import 'common/palette';
+@import "common/variables";
+@import 'common/mixins';
+@import '../../lib/bootstrap-5.3.6/scss/bootstrap.scss';
+
+@import "common/typography";
+@import "common/buttons";
+@import "common/page-structure";
+@import "common/global-navigation";
+@import "common/forms";
+@import "common/social-sharingbar";
+
+@import "components/breadcrumbs";
+
+@import "page-templates/front-page";
+@import "page-templates/interior-sidebar";
+@import "page-templates/blog";
+@import "page-templates/footer";
+@import "page-templates/pagination";
+@import "page-templates/search";
+@import "page-templates/error404";
+@import "page-templates/modal-dialog";
+
+
+.print-only {
+    display:none;
+}
+@import "print";

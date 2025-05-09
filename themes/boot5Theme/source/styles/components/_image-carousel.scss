@@ -1,0 +1,166 @@
+.image-carousel {
+
+	overflow:hidden;
+
+	.carousel-inner {
+		display: flex;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    overflow: visible;
+
+	    @media (prefers-reduced-motion: no-preference) {
+	    	transition: transform .6s;
+	    }
+
+	   	&.has-slides {
+	   		cursor: grab;
+	   		user-select: none; 
+	   	}
+
+	}
+	.carousel-slide {
+		min-width: 100%;
+		display:flex;
+		border-radius: 8px;
+		border: 1px solid $gray-1;
+
+		.slide-body {
+			padding: 3rem;
+		}
+
+		& > div {
+			position: relative;
+		}
+		img {
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    height: 100%;
+		    width:100%;
+		    object-fit: cover;
+		    border-radius: 8px 0 0 8px;
+		    z-index: 1;
+		}
+	}
+	.carousel-nav {
+		// display: none;
+	}
+
+	@include media-breakpoint-down(md) {
+
+		.carousel-inner {
+
+			.carousel-slide {
+
+				flex-direction: column;
+
+				.slide-body {
+					padding: 1.5rem;
+				}
+				
+				.image-wrapper {
+					height: 180px;
+				}
+				img {
+					border-radius: 8px 8px 0 0;
+				}
+			}
+
+		}
+	
+		
+		
+	} /* @include media-breakpoint-down(md)*/
+
+	@media (max-width: 575.98px) {
+
+		overflow:visible;
+	
+		.carousel-inner {
+
+			.carousel-slide {
+				min-width: 95%;
+				margin-right:5%;
+			}
+
+		}
+		
+	} /* @media (max-width: 575.98px)*/
+
+}
+.carousel-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: calc($interior-mobile-spacing / 2);
+
+	.carousel-next, .carousel-prev {
+		border: 0;
+		background: transparent;
+		margin: 0 .5rem;
+		padding: 6px 6px;
+		font-size: 20px; 
+		color: $secondary;
+
+		&:hover {
+			color: $secondary-dark;
+		}
+	}
+}
+
+.coin-pager {
+
+    text-align: center;
+
+    button {
+        appearance: none;
+        background: transparent;
+        border: 0;
+        padding: 6px;
+        margin: 0 .5rem;
+
+        span {
+            display: block;
+            border-radius: 100%;
+            width: 10px;
+            height: 10px;
+            background: $gray-1;
+        }
+
+        &.active,
+        &:hover      {
+
+            span {
+                background: $secondary;
+            }
+            
+        }
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+	.carousel-nav {
+
+		.carousel-next, .carousel-prev {
+
+			margin: 0 .25rem;
+			padding: 6px 3px;
+		}
+	}
+
+	.coin-pager {
+
+	    text-align: center;
+
+	    button {
+
+	        padding: 6px 3px;
+	        margin: 0 .5rem;
+	    }
+	}
+	
+} /* @media (max-width: 575.98px)*/
